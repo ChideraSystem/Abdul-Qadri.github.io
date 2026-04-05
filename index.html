@@ -14,16 +14,12 @@
 html{scroll-behavior:smooth}
 body{font-family:'Georgia',serif;color:var(--text);background:var(--white);overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.15);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo{font-family:'Georgia',serif;font-weight:700;font-size:18px;color:var(--white);letter-spacing:0.02em;text-decoration:none}
 .nav-logo span{color:var(--gold)}
 .nav-links{display:flex;gap:36px;list-style:none}
 .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
 .nav-links a:hover{color:var(--gold2)}
-
-/* HERO */
 .hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 48px 160px}
 .hero::after{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(ellipse at center,rgba(201,168,76,0.08) 0%,transparent 70%);pointer-events:none}
 .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
@@ -45,15 +41,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .stat-item:last-child{border-right:none}
 .stat-number{font-family:'Georgia',serif;font-size:32px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px}
 .stat-label{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
-
-/* SHARED */
 .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .section-label::before{content:'';width:24px;height:1px;background:var(--gold);opacity:0.6}
 .section-heading{font-family:'Georgia',serif;font-weight:700;font-size:clamp(28px,4vw,42px);color:var(--navy);line-height:1.15;margin-bottom:16px}
 .gold-divider{width:48px;height:2px;background:var(--gold);margin-bottom:32px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 48px}
-
-/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .about-text p{font-size:15px;line-height:1.85;color:#4A5A6E;margin-bottom:20px}
 .about-text p:last-child{margin-bottom:0}
@@ -61,8 +53,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .about-card+.about-card{border-top:none}
 .about-card-label{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .about-card p{font-size:14px;line-height:1.75;color:#4A5A6E}
-
-/* EXPERIENCE */
 .exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:60px}
 .exp-card{border:1px solid var(--border);padding:40px 36px;position:relative;background:var(--white);transition:all 0.3s ease;overflow:hidden;opacity:0;transform:translateY(16px)}
 .exp-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.3s ease}
@@ -74,9 +64,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .exp-date{font-size:12px;color:var(--gold);letter-spacing:0.06em;margin-bottom:24px;font-weight:500}
 .exp-responsibilities{list-style:none;display:flex;flex-direction:column;gap:10px}
 .exp-responsibilities li{font-size:14px;line-height:1.7;color:#4A5A6E;padding-left:20px;position:relative}
-.exp-responsibilities li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:12px;top:2px}
-
-/* SKILLS */
+.exp-responsibilities li::before{content:'&#8594;';position:absolute;left:0;color:var(--gold);font-size:12px;top:2px}
 .skills-outer-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:60px}
 .skills-group-title{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
 .skills-group-title::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.2)}
@@ -85,8 +73,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .skill-tag:hover{border-left-color:var(--slate);background:var(--navy);color:var(--white)}
 .tool-tag{background:var(--navy);border:1px solid rgba(201,168,76,0.2);padding:8px 14px;font-size:12px;font-weight:500;color:var(--gold2);letter-spacing:0.04em;transition:all 0.2s}
 .tool-tag:hover{background:var(--navy3);border-color:var(--gold)}
-
-/* BANNER */
 .project-banner{background:var(--navy);padding:var(--gap) 0;position:relative;overflow:hidden}
 .project-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .project-banner::after{content:'';position:absolute;bottom:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(ellipse,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
@@ -104,9 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .doc-list{list-style:none}
 .doc-list li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,168,76,0.08);font-size:13px;color:rgba(244,241,236,0.7)}
 .doc-list li:last-child{border-bottom:none}
-.doc-list li::before{content:'→';color:var(--gold);font-size:12px;flex-shrink:0}
-
-/* DELIVERABLES */
+.doc-list li::before{content:'&#8594;';color:var(--gold);font-size:12px;flex-shrink:0}
 .work-section{padding:var(--gap) 0;border-top:1px solid var(--border)}
 .work-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;gap:40px}
 .work-header-left{flex:1}
@@ -122,8 +106,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .card-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#3D9970;text-decoration:none;border:1px solid #3D9970;padding:2px 8px;border-radius:4px;transition:all 0.2s}
 .card-link::before{content:'';width:6px;height:6px;border-radius:50%;background:#3D9970;flex-shrink:0}
 .card-link:hover{background:#3D9970;color:var(--white)}
-
-/* CONTACT */
 #contact{background:var(--navy);padding:var(--gap) 0;position:relative;overflow:hidden}
 #contact::before{content:'';position:absolute;top:-300px;right:-200px;width:700px;height:700px;background:radial-gradient(ellipse,rgba(201,168,76,0.05) 0%,transparent 70%);pointer-events:none}
 .contact-inner{max-width:700px;margin:0 auto;padding:0 48px;position:relative;z-index:1}
@@ -135,8 +117,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .contact-link:hover{color:var(--gold2)}
 .contact-link-icon{width:36px;height:36px;border:1px solid rgba(201,168,76,0.2);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;transition:all 0.2s}
 .contact-link:hover .contact-link-icon{background:rgba(201,168,76,0.1);border-color:var(--gold)}
-
-/* FOOTER */
 footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(201,168,76,0.08);position:relative;z-index:1}
 .footer-logo{font-family:'Georgia',serif;font-weight:700;font-size:16px;color:var(--white)}
 .footer-logo span{color:var(--gold)}
@@ -144,10 +124,8 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
 .footer-nav{display:flex;gap:28px;list-style:none}
 .footer-nav a{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s}
 .footer-nav a:hover{color:var(--gold2)}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
 @media(max-width:900px){
   nav{padding:0 24px}.nav-links{gap:20px}
   .hero{padding:120px 24px 80px}
@@ -168,7 +146,6 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Abdul<span>-Qadri</span></a>
   <ul class="nav-links">
@@ -176,20 +153,20 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#deliverables">Deliverables</a></li>
+    <li><a href="#governance">Governance</a></li>
     <li><a href="#cv">CV</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Portfolio · 2026</p>
+    <p class="hero-eyebrow">Portfolio &middot; 2026</p>
     <h1 class="hero-name">Yusuff-Salihu<br><span class="highlight">Abdul-Qadri</span></h1>
-    <p class="hero-title"><strong>Business Analyst</strong> &nbsp;·&nbsp; <strong>Product Manager</strong></p>
-    <p class="hero-bio">I work at the intersection of requirements, product strategy, and execution. As co-founder of Odyssey Technologies, I built and delivered every BA and PM deliverable on Mocksy — a live AI product launching April 2026 — under real constraints, real stakeholders, and a real deadline. This portfolio is the evidence of that.</p>
+    <p class="hero-title"><strong>Business Analyst</strong> &nbsp;&middot;&nbsp; <strong>Product Manager</strong></p>
+    <p class="hero-bio">I work at the intersection of requirements, product strategy, and execution. As co-founder of Odyssey Technologies, I built and delivered every BA and PM deliverable on Mocksy &mdash; a live AI product launching April 2026 &mdash; under real constraints, real stakeholders, and a real deadline. This portfolio is the evidence of that.</p>
     <div class="hero-cta">
-      <a href="#deliverables" class="btn-primary">View Deliverables ↓</a>
+      <a href="#deliverables" class="btn-primary">View Deliverables &darr;</a>
       <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
@@ -200,7 +177,6 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" style="background:var(--light);padding:var(--gap) 0;position:relative;z-index:1;">
   <div class="wrap">
     <p class="section-label">About Me</p>
@@ -208,24 +184,24 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
       <div class="about-text">
         <div class="gold-divider"></div>
         <h2 class="section-heading">Turning ambiguity<br>into clarity.</h2>
-        <p>I'm a Business Analyst and Product Manager based in Nigeria. I co-founded Odyssey Technologies in late 2025 and have since built process discipline, product strategy, and delivery governance on Mocksy — a live AI product launching April 2026.</p>
+        <p>I'm a Business Analyst and Product Manager based in Nigeria. I co-founded Odyssey Technologies in late 2025 and have since built process discipline, product strategy, and delivery governance on Mocksy &mdash; a live AI product launching April 2026.</p>
         <p>My work sits across two disciplines: on the BA side, I handle requirements elicitation, stakeholder management, process mapping, and documentation. On the PM side, I own the product vision, roadmap, go-to-market strategy, and the decisions that shape what gets built and when.</p>
-        <p>I'm a final-year Law student at the University of Ilorin — a background that sharpens my ability to think precisely, structure arguments, and navigate compliance and contractual work. Available for remote and hybrid BA and PM roles.</p>
+        <p>I'm a final-year Law student at the University of Ilorin &mdash; a background that sharpens my ability to think precisely, structure arguments, and navigate compliance and contractual work. Available for remote and hybrid BA and PM roles.</p>
       </div>
       <div>
         <p class="section-label" style="margin-bottom:28px;">What I Bring</p>
         <div>
           <div class="about-card">
             <p class="about-card-label">Business Analysis</p>
-            <p>Requirements elicitation, stakeholder management, process mapping, EPIC and BRD documentation, backlog management, and acceptance criteria writing — all applied on a live product.</p>
+            <p>Requirements elicitation, stakeholder management, process mapping, EPIC and BRD documentation, backlog management, and acceptance criteria writing &mdash; all applied on a live product.</p>
           </div>
           <div class="about-card" style="border-top:none;">
             <p class="about-card-label">Product Management</p>
-            <p>Product vision, competitive analysis, user personas, product roadmap, go-to-market strategy, and feature prioritisation — grounded in real user research and real business constraints.</p>
+            <p>Product vision, competitive analysis, user personas, product roadmap, go-to-market strategy, and feature prioritisation &mdash; grounded in real user research and real business constraints.</p>
           </div>
           <div class="about-card" style="border-top:none;">
-            <p class="about-card-label">Governance & Compliance</p>
-            <p>Company incorporation, IP trademark registration, contracts, expense tracking, and change control governance — the operational infrastructure behind the product.</p>
+            <p class="about-card-label">Governance &amp; Compliance</p>
+            <p>Company incorporation, IP trademark registration, contracts, expense tracking, and change control governance &mdash; the operational infrastructure behind the product.</p>
           </div>
         </div>
       </div>
@@ -233,50 +209,45 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" style="background:var(--white);padding:var(--gap) 0;position:relative;z-index:1;border-top:1px solid var(--border);">
   <div class="wrap">
     <p class="section-label">Experience</p>
     <div class="gold-divider"></div>
     <h2 class="section-heading">Where the work<br>was done.</h2>
     <div class="exp-grid">
-
       <div class="exp-card">
-        <span class="exp-role-badge">01 · Business Analysis</span>
+        <span class="exp-role-badge">01 &middot; Business Analysis</span>
         <p class="exp-company">Odyssey Technologies Limited</p>
         <h3 class="exp-title">Business Analyst</h3>
-        <p class="exp-date">Late 2025 — Present · Nigeria (Hybrid)</p>
+        <p class="exp-date">Late 2025 &mdash; Present &middot; Nigeria (Hybrid)</p>
         <ul class="exp-responsibilities">
-          <li>Led requirements elicitation sessions — conducting stakeholder interviews, facilitating workshops, and translating findings into structured documentation using the BABOK framework.</li>
+          <li>Led requirements elicitation sessions &mdash; conducting stakeholder interviews, facilitating workshops, and translating findings into structured documentation using the BABOK framework.</li>
           <li>Authored MoSCoW-prioritised EPICs covering 16 features, 7 non-functional requirements, acceptance criteria, and scope boundary definitions; managed product backlog in Linear.</li>
           <li>Produced stakeholder influence/interest matrix and tailored communication plans; drove alignment across all stakeholders, integrating all proposed features into confirmed product scope.</li>
           <li>Mapped AS-IS and TO-BE processes, producing SOPs, use case documents, and a requirements traceability matrix.</li>
           <li>Designed and deployed a 7-form Airtable operations system covering change control, expense tracking, daily reporting, bug collection, and user feedback; built Zapier automations connecting form submissions to structured Linear issue creation and Discord notifications, eliminating manual handoffs across the workflow.</li>
         </ul>
       </div>
-
       <div class="exp-card">
-        <span class="exp-role-badge">02 · Product Management</span>
-        <p class="exp-company">Odyssey Technologies Limited — Mocksy</p>
+        <span class="exp-role-badge">02 &middot; Product Management</span>
+        <p class="exp-company">Odyssey Technologies Limited &mdash; Mocksy</p>
         <h3 class="exp-title">Product Manager</h3>
-        <p class="exp-date">Late 2025 — Present · Nigeria (Hybrid)</p>
+        <p class="exp-date">Late 2025 &mdash; Present &middot; Nigeria (Hybrid)</p>
         <ul class="exp-responsibilities">
-          <li>Defined and owned the product vision for Mocksy — an AI-powered tool that transforms prompts and sketches into production-ready UI mockups; led competitive analysis across six AI design tools, confirming Chat-to-Design as a market differentiator absent in all competitors.</li>
+          <li>Defined and owned the product vision for Mocksy &mdash; an AI-powered tool that transforms prompts and sketches into production-ready UI mockups; led competitive analysis across six AI design tools, confirming Chat-to-Design as a market differentiator absent in all competitors.</li>
           <li>Authored the Product Requirements Document tying all 16 EPICs to user personas, business objectives, and MVP constraints.</li>
-          <li>Built a three-horizon product roadmap — MVP, Post-MVP (0–3 months), and Growth (3–12 months) — with every feature tied to a business outcome.</li>
+          <li>Built a three-horizon product roadmap &mdash; MVP, Post-MVP (0&ndash;3 months), and Growth (3&ndash;12 months) &mdash; with every feature tied to a business outcome.</li>
           <li>Led pre-launch execution: rebuilt the Mocksy landing page in HTML from scratch, embedded Brevo waitlist capture with automated welcome flow, secured usemocksy.com, and confirmed April 15 as the product launch date.</li>
           <li>Developed go-to-market strategy and pre-launch marketing plan (organic-only: WhatsApp, Reddit, Discord); recruited, briefed, and interviewed four volunteer SMM candidates; produced formal SMM Brief covering platform strategy and brand direction.</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" style="background:var(--light);padding:var(--gap) 0;position:relative;z-index:1;border-top:1px solid var(--border);">
   <div class="wrap">
-    <p class="section-label">Skills & Tools</p>
+    <p class="section-label">Skills &amp; Tools</p>
     <div class="gold-divider"></div>
     <h2 class="section-heading">The disciplines<br>and tools I work with.</h2>
     <div class="skills-outer-grid">
@@ -284,7 +255,7 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
         <p class="skills-group-title">Business Analysis</p>
         <div class="skills-tag-grid">
           <span class="skill-tag">Requirements Elicitation</span>
-          <span class="skill-tag">EPIC & User Story Writing</span>
+          <span class="skill-tag">EPIC &amp; User Story Writing</span>
           <span class="skill-tag">MoSCoW Prioritisation</span>
           <span class="skill-tag">Stakeholder Mapping</span>
           <span class="skill-tag">Process Mapping (AS-IS/TO-BE)</span>
@@ -296,7 +267,7 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
         </div>
         <p class="skills-group-title" style="margin-top:40px;">Product Management</p>
         <div class="skills-tag-grid">
-          <span class="skill-tag">Product Vision & Strategy</span>
+          <span class="skill-tag">Product Vision &amp; Strategy</span>
           <span class="skill-tag">Product Roadmapping</span>
           <span class="skill-tag">Competitive Analysis</span>
           <span class="skill-tag">User Persona Development</span>
@@ -307,7 +278,7 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
         </div>
       </div>
       <div>
-        <p class="skills-group-title">Tools & Platforms</p>
+        <p class="skills-group-title">Tools &amp; Platforms</p>
         <div class="skills-tag-grid">
           <span class="tool-tag">Linear</span>
           <span class="tool-tag">Airtable</span>
@@ -326,7 +297,7 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
           <span class="tool-tag">Canva</span>
           <span class="tool-tag">Buffer</span>
           <span class="tool-tag">Notta AI</span>
-          <span class="tool-tag">Claude · ChatGPT</span>
+          <span class="tool-tag">Claude &middot; ChatGPT</span>
         </div>
         <p class="skills-group-title" style="margin-top:40px;">Soft Skills</p>
         <div class="skills-tag-grid">
@@ -334,21 +305,20 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
           <span class="skill-tag">Analytical Thinking</span>
           <span class="skill-tag">Cross-functional Collaboration</span>
           <span class="skill-tag">Decision Making Under Uncertainty</span>
-          <span class="skill-tag">Written & Verbal Communication</span>
-          <span class="skill-tag">Legal & Compliance Awareness</span>
+          <span class="skill-tag">Written &amp; Verbal Communication</span>
+          <span class="skill-tag">Legal &amp; Compliance Awareness</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MOCKSY BANNER -->
 <section class="project-banner">
   <div class="banner-inner">
     <div class="banner-text">
       <p class="section-label">Featured Case Study</p>
-      <h2 class="banner-heading">Mocksy — <em>AI-Powered</em><br>UI Mockup Tool</h2>
-      <p class="banner-desc">A live pre-launch product co-founded with a CTO — launching April 2026. Every deliverable in this portfolio was produced against Mocksy's actual requirements, stakeholders, technical constraints, and decisions — including a mid-build component rebuild, a formal high-risk project classification, and a full landing page rebuild in HTML ahead of launch.</p>
+      <h2 class="banner-heading">Mocksy &mdash; <em>AI-Powered</em><br>UI Mockup Tool</h2>
+      <p class="banner-desc">A live pre-launch product co-founded with a CTO &mdash; launching April 2026. Every deliverable in this portfolio was produced against Mocksy&rsquo;s actual requirements, stakeholders, technical constraints, and decisions &mdash; including a mid-build component rebuild, a formal high-risk project classification, and a full landing page rebuild in HTML ahead of launch.</p>
       <div class="banner-pills">
         <span class="pill">Next.js</span>
         <span class="pill">Claude API (Anthropic)</span>
@@ -357,158 +327,153 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
         <span class="pill">Vercel / Sevalla</span>
         <span class="pill">Agile</span>
       </div>
-      <a href="#deliverables" class="btn-primary">Explore Deliverables ↓</a>
+      <a href="#deliverables" class="btn-primary">Explore Deliverables &darr;</a>
     </div>
     <div class="banner-card">
       <p class="banner-card-title">Deliverables Produced</p>
       <ul class="doc-list">
-        <li>MVP Epics &amp; Requirements — 16 Epics, 7 NFRs, full AC</li>
-        <li>Stakeholder Collaboration Plan · Process Map</li>
+        <li>MVP Epics &amp; Requirements &mdash; 16 Epics, 7 NFRs, full AC</li>
+        <li>Stakeholder Collaboration Plan &middot; Process Map</li>
         <li>Requirements Traceability Matrix</li>
-        <li>Use Case Document (×6 use cases)</li>
-        <li>User Personas (×3) · Competitive Analysis</li>
+        <li>Use Case Document (&times;6 use cases)</li>
+        <li>User Personas (&times;3) &middot; Competitive Analysis</li>
         <li>Product Requirements Document</li>
-        <li>Product Roadmap · Go-to-Market Brief</li>
-        <li>Risk Register — formally high-risk classification</li>
+        <li>Product Roadmap &middot; Go-to-Market Brief</li>
+        <li>Risk Register &mdash; formally high-risk classification</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- DELIVERABLES ANCHOR -->
 <div id="deliverables"></div>
 
-<!-- BA DELIVERABLES -->
 <section id="ba" class="work-section" style="background:var(--white);padding:var(--gap) 0;position:relative;z-index:1;">
   <div class="wrap">
     <div class="work-header">
       <div class="work-header-left">
-        <span class="discipline-badge">01 · Business Analysis</span>
-        <h2 class="section-heading">Requirements, Stakeholders<br>& Process</h2>
+        <span class="discipline-badge">01 &middot; Business Analysis</span>
+        <h2 class="section-heading">Requirements, Stakeholders<br>&amp; Process</h2>
       </div>
       <p style="max-width:340px;font-size:14px;line-height:1.7;color:#6A7A8E;">Deliverables that define what gets built, who cares about it, and why each decision was made.</p>
     </div>
     <div class="deliverables-grid">
       <div class="deliverable-card">
-        <p class="card-number">BA - 01</p>
+        <p class="card-number">BA &ndash; 01</p>
         <h3 class="card-title">MVP Epics &amp; Requirements</h3>
         <p class="card-desc">16 Epics with MoSCoW-prioritised requirements, 7 non-functional requirements, story point estimates, full acceptance criteria, and a scope boundary definition. Every other deliverable in this portfolio traces back to this document.</p>
-        <a href="https://drive.google.com/file/d/1zc4-g-Z_COc5B2bhfotQWntvp5cQgwLE/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <a href="https://drive.google.com/file/d/1zc4-g-Z_COc5B2bhfotQWntvp5cQgwLE/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">BA - 02</p>
+        <p class="card-number">BA &ndash; 02</p>
         <h3 class="card-title">Stakeholder Collaboration Plan</h3>
-        <p class="card-desc">Every stakeholder mapped on a Power/Interest grid with a tailored communication matrix — channel, frequency, format, and owner per group. Built from real elicitation sessions, not templates.</p>
-        <a href="https://drive.google.com/file/d/1-A6Ecd7bH9_9m0e7YjE3v6K8Hm8mDNOs/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">Every stakeholder mapped on a Power/Interest grid with a tailored communication matrix &mdash; channel, frequency, format, and owner per group. Built from real elicitation sessions, not templates.</p>
+        <a href="https://drive.google.com/file/d/1-A6Ecd7bH9_9m0e7YjE3v6K8Hm8mDNOs/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">BA - 03</p>
+        <p class="card-number">BA &ndash; 03</p>
         <h3 class="card-title">Requirements Traceability Matrix</h3>
-        <p class="card-desc">17 requirements traced across seven columns — from business objective through stakeholder source, MoSCoW priority, user story references, and development status. Full end-to-end visibility.</p>
-        <a href="https://drive.google.com/file/d/1H7fKSo7yuXI2rrqKnjTchr8IijgiIjIt/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">17 requirements traced across seven columns &mdash; from business objective through stakeholder source, MoSCoW priority, user story references, and development status. Full end-to-end visibility.</p>
+        <a href="https://drive.google.com/file/d/1H7fKSo7yuXI2rrqKnjTchr8IijgiIjIt/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">BA - 04</p>
+        <p class="card-number">BA &ndash; 04</p>
         <h3 class="card-title">Use Case Document</h3>
-        <p class="card-desc">Six use cases covering the full product — authentication, project creation, canvas interaction, Chat-to-Design generation, credit purchase, and autosave. Each with actor, trigger, main flow, alternates, and post-conditions.</p>
-        <a href="https://drive.google.com/file/d/1txvnKsN7WAQzbgwmXE1-6mN9ymc1T34v/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">Six use cases covering the full product &mdash; authentication, project creation, canvas interaction, Chat-to-Design generation, credit purchase, and autosave. Each with actor, trigger, main flow, alternates, and post-conditions.</p>
+        <a href="https://drive.google.com/file/d/1txvnKsN7WAQzbgwmXE1-6mN9ymc1T34v/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">BA - 05</p>
+        <p class="card-number">BA &ndash; 05</p>
         <h3 class="card-title">Process Map (AS-IS / TO-BE)</h3>
         <p class="card-desc">Swimlane diagrams of the designer-to-mockup workflow before and after Mocksy. Includes friction point analysis and side-by-side comparison. Directly informed the Chat-to-Design feature requirements.</p>
-        <a href="https://drive.google.com/file/d/116C1D7laPeLTF1YnW61bHh0ew95M9gG_/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <a href="https://drive.google.com/file/d/116C1D7laPeLTF1YnW61bHh0ew95M9gG_/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PM DELIVERABLES -->
 <section id="product" class="work-section" style="background:var(--light);padding:var(--gap) 0;position:relative;z-index:1;">
   <div class="wrap">
     <div class="work-header">
       <div class="work-header-left">
-        <span class="discipline-badge">02 · Product Management</span>
-        <h2 class="section-heading">Vision, Strategy<br>& Roadmap</h2>
+        <span class="discipline-badge">02 &middot; Product Management</span>
+        <h2 class="section-heading">Vision, Strategy<br>&amp; Roadmap</h2>
       </div>
       <p style="max-width:340px;font-size:14px;line-height:1.7;color:#6A7A8E;">Deliverables that define where the product is going and how it will compete.</p>
     </div>
     <div class="deliverables-grid">
       <div class="deliverable-card">
-        <p class="card-number">PM - 01</p>
+        <p class="card-number">PM &ndash; 01</p>
         <h3 class="card-title">Competitive Analysis</h3>
-        <p class="card-desc">Market overview ($6.1B → $28.5B at 17.3% CAGR), six competitor profiles, eight market gaps, and an 18-feature comparison matrix. Chat-to-Design, Workflow Generation, and Design Chat confirmed absent across all competitors.</p>
-        <a href="https://drive.google.com/file/d/1U2nXVQq7CHjIvYKrnCMyYsDGDr9yE3E_/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">Market overview ($6.1B &rarr; $28.5B at 17.3% CAGR), six competitor profiles, eight market gaps, and an 18-feature comparison matrix. Chat-to-Design, Workflow Generation, and Design Chat confirmed absent across all competitors.</p>
+        <a href="https://drive.google.com/file/d/1U2nXVQq7CHjIvYKrnCMyYsDGDr9yE3E_/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">PM - 02</p>
+        <p class="card-number">PM &ndash; 02</p>
         <h3 class="card-title">Product Requirements Document</h3>
-        <p class="card-desc">Feature rationale for all 16 Epics — each with a priority line, why-it-is-included section, competitive context, and MVP constraint. Answers not just what is being built, but why every decision was made.</p>
-        <a href="https://drive.google.com/file/d/1HerV5FWz3QcZBLZeZywezqJPN1jyIrPe/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">Feature rationale for all 16 Epics &mdash; each with a priority line, why-it-is-included section, competitive context, and MVP constraint. Answers not just what is being built, but why every decision was made.</p>
+        <a href="https://drive.google.com/file/d/1HerV5FWz3QcZBLZeZywezqJPN1jyIrPe/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">PM - 03</p>
+        <p class="card-number">PM &ndash; 03</p>
         <h3 class="card-title">Product Roadmap</h3>
-        <p class="card-desc">Three horizons — MVP (13 features), Post-MVP (0–3 months), Growth (3–12 months). Every feature tied to a business outcome, not just a development task. Includes scope changes made mid-build.</p>
-        <a href="https://drive.google.com/file/d/1Bx7tQ_VaDJLP6Te_BAukncADrly4TOQx/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">Three horizons &mdash; MVP (13 features), Post-MVP (0&ndash;3 months), Growth (3&ndash;12 months). Every feature tied to a business outcome, not just a development task. Includes scope changes made mid-build.</p>
+        <a href="https://drive.google.com/file/d/1Bx7tQ_VaDJLP6Te_BAukncADrly4TOQx/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">PM - 04</p>
+        <p class="card-number">PM &ndash; 04</p>
         <h3 class="card-title">Go-to-Market Brief</h3>
         <p class="card-desc">Positioning statement, target segment sequencing (designers first, founders second), four launch channels, message variants per context, success metrics, and a launch readiness checklist.</p>
-        <a href="https://drive.google.com/file/d/1LZ36QApPJPYZ2j3uIDoXZXiL9lyey73y/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <a href="https://drive.google.com/file/d/1LZ36QApPJPYZ2j3uIDoXZXiL9lyey73y/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
       <div class="deliverable-card">
-        <p class="card-number">PM - 05</p>
-        <h3 class="card-title">User Personas (×3)</h3>
-        <p class="card-desc">James (Founder, 28) · Amara (Designer, 31) · Tolu (Business Analyst, 35). Derived from real elicitation sessions — not invented profiles. Each persona is directly referenced in the PRD.</p>
-        <a href="https://drive.google.com/file/d/1VptxpTtEhUmIXSlLOeIaB-KhcErZxjno/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-number">PM &ndash; 05</p>
+        <h3 class="card-title">User Personas (&times;3)</h3>
+        <p class="card-desc">James (Founder, 28) &middot; Amara (Designer, 31) &middot; Tolu (Business Analyst, 35). Derived from real elicitation sessions &mdash; not invented profiles. Each persona is directly referenced in the PRD.</p>
+        <a href="https://drive.google.com/file/d/1VptxpTtEhUmIXSlLOeIaB-KhcErZxjno/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GOVERNANCE -->
 <section id="governance" class="work-section" style="background:var(--white);padding:var(--gap) 0;position:relative;z-index:1;">
   <div class="wrap">
     <div class="work-header">
       <div class="work-header-left">
-        <span class="discipline-badge">03 · Governance</span>
-        <h2 class="section-heading">Risk, Compliance<br>& Decisions</h2>
+        <span class="discipline-badge">03 &middot; Governance</span>
+        <h2 class="section-heading">Risk, Compliance<br>&amp; Decisions</h2>
       </div>
-      <p style="max-width:340px;font-size:14px;line-height:1.7;color:#6A7A8E;">The operational and legal infrastructure behind the product — honest, not sanitised.</p>
+      <p style="max-width:340px;font-size:14px;line-height:1.7;color:#6A7A8E;">The operational and legal infrastructure behind the product &mdash; honest, not sanitised.</p>
     </div>
     <div class="deliverables-grid">
       <div class="deliverable-card">
-        <p class="card-number">GV - 01</p>
+        <p class="card-number">GV &ndash; 01</p>
         <h3 class="card-title">Risk Register</h3>
-        <p class="card-desc">12 risks across Technical, Project, Product, and Legal categories — each with probability rating, impact rating, mitigation strategy, and contingency. The project is formally classified as high-risk. An honest assessment, not a sanitised one.</p>
-        <a href="https://drive.google.com/file/d/1GTJ-kPjx_-E_DrevUI2Kx_AbGKSvT2wE/view?usp=drive_link" target="_blank" class="card-link">View Document →</a>
+        <p class="card-desc">12 risks across Technical, Project, Product, and Legal categories &mdash; each with probability rating, impact rating, mitigation strategy, and contingency. The project is formally classified as high-risk. An honest assessment, not a sanitised one.</p>
+        <a href="https://drive.google.com/file/d/1GTJ-kPjx_-E_DrevUI2Kx_AbGKSvT2wE/view?usp=drive_link" target="_blank" class="card-link">View Document &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CV -->
-<section id="cv" style="background:var(--white);padding:var(--gap) 0;position:relative;z-index:1;border-top:1px solid var(--border);">
+<section id="cv" style="background:var(--light);padding:var(--gap) 0;position:relative;z-index:1;border-top:1px solid var(--border);">
   <div class="wrap">
     <p class="section-label">Curriculum Vitae</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
       <div>
         <div class="gold-divider"></div>
         <h2 class="section-heading">Download<br>My CV.</h2>
-        <p style="font-size:15px;line-height:1.8;color:#4A5A6E;margin-bottom:20px;">My CV covers Business Analysis and Product Management work — all grounded in the Mocksy case study. It reflects real requirements elicitation, real stakeholder management, real product decisions, and a live product approaching launch.</p>
+        <p style="font-size:15px;line-height:1.8;color:#4A5A6E;margin-bottom:20px;">My CV covers Business Analysis and Product Management work &mdash; all grounded in the Mocksy case study. It reflects real requirements elicitation, real stakeholder management, real product decisions, and a live product launching April 2026.</p>
         <p style="font-size:15px;line-height:1.8;color:#4A5A6E;">Positioned for BA and PM roles across startups and enterprise environments.</p>
       </div>
       <div>
-        <a href="https://drive.google.com/file/d/1kQbhhS5S63ZfhA84pJNOt1ec_LvBTy2y/view?usp=sharing" target="_blank" style="display:flex;align-items:center;gap:14px;background:var(--light);border:1px solid var(--border);padding:24px 28px;text-decoration:none;transition:all 0.25s;color:var(--text);" onmouseover="this.style.borderColor='var(--gold)';this.style.background='var(--white)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--light)'">
+        <a href="https://drive.google.com/file/d/1kQbhhS5S63ZfhA84pJNOt1ec_LvBTy2y/view?usp=sharing" target="_blank" style="display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--border);padding:24px 28px;text-decoration:none;transition:all 0.25s;color:var(--text);" onmouseover="this.style.borderColor='var(--gold)';this.style.background='var(--light)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--white)'">
           <div style="width:44px;height:44px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <span style="color:var(--gold);font-size:16px;">↓</span>
+            <span style="color:var(--gold);font-size:16px;">&darr;</span>
           </div>
           <div>
-            <p style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Business Analyst & Product Manager</p>
+            <p style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Business Analyst &amp; Product Manager</p>
             <p style="font-size:16px;color:var(--navy);font-weight:600;font-family:'Georgia',serif;">Download CV</p>
-            <p style="font-size:12px;color:#8A9BB0;margin-top:4px;">PDF Format · 2026</p>
+            <p style="font-size:12px;color:#8A9BB0;margin-top:4px;">PDF Format &middot; 2026</p>
           </div>
         </a>
       </div>
@@ -516,36 +481,34 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <p class="section-label" style="color:var(--gold2);">Get In Touch</p>
     <h2 class="contact-heading">Open to <em>remote</em><br>and hybrid opportunities.</h2>
-    <p class="contact-desc">I'm open to remote and hybrid BA and PM roles. Particularly drawn to organisations building meaningful products — environments where I can apply structured thinking, work on real problems, and deliver tangible value. Based in Nigeria. Available for contract, freelance, and full-time engagements.</p>
+    <p class="contact-desc">I'm open to remote and hybrid BA and PM roles. Particularly drawn to organisations building meaningful products &mdash; environments where I can apply structured thinking, work on real problems, and deliver tangible value. Based in Nigeria. Available for contract, freelance, and full-time engagements.</p>
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#2b4a494f5e475a4a4f59424843424f4e594a6b4c464a424705484446" class="contact-link">
-        <div class="contact-link-icon">✉</div><span class="__cf_email__" data-cfemail="83e2e1e7f6eff2e2e7f1eae0ebeae7e6f1e2c3e4eee2eaefade0ecee">[email&#160;protected]</span>
+      <a href="mailto:abdulqadrichidera@gmail.com" class="contact-link">
+        <div class="contact-link-icon">&#9993;</div>abdulqadrichidera@gmail.com
       </a>
       <a href="https://www.linkedin.com/in/abdul-qadri-yusuff-salihu-69bb7830a" target="_blank" class="contact-link">
         <div class="contact-link-icon">in</div>linkedin.com/in/abdul-qadri-yusuff-salihu
       </a>
       <a href="https://www.tiktok.com/@9jaProductPath" target="_blank" class="contact-link">
-        <div class="contact-link-icon">♪</div>@9jaProductPath
+        <div class="contact-link-icon">&#9834;</div>@9jaProductPath
       </a>
       <a href="https://x.com/9jaProductPath" target="_blank" class="contact-link">
-        <div class="contact-link-icon">𝕏</div>@9jaProductPath
+        <div class="contact-link-icon">&#120143;</div>@9jaProductPath
       </a>
       <a href="https://www.instagram.com/9jaProductPath" target="_blank" class="contact-link">
-        <div class="contact-link-icon">◎</div>@9jaProductPath
+        <div class="contact-link-icon">&#9678;</div>@9jaProductPath
       </a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Abdul<span>-Qadri</span></div>
-  <p class="footer-copy">© 2026 Yusuff-Salihu Abdul-Qadri · Nigeria</p>
+  <p class="footer-copy">&copy; 2026 Yusuff-Salihu Abdul-Qadri &middot; Nigeria</p>
   <ul class="footer-nav">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -557,7 +520,7 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
   </ul>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -569,4 +532,10 @@ footer{background:#080F18;padding:32px 48px;display:flex;align-items:center;just
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold:
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.deliverable-card').forEach((c, i) => { c.dataset.delay = i * 80; obs.observe(c); });
+  document.querySelectorAll('.exp-card').forEach((c, i) => { c.dataset.delay = i * 120; obs.observe(c); });
+</script>
+</body>
+</html>
